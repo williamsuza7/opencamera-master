@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.github.florent37.awesomebar.AwesomeBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:bar_actionsColor="@color/colorAccent"
+        app:bar_animatedIcons="true"
+        android:background="@color/bar_background"
+        app:bar_primaryColor="@color/bar_primaryColor"
+        app:bar_primaryDarkColor="@color/bar_primaryDarkColor"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_weight="1">
+
+
+        <EditText
+            android:id="@+id/ipAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/ip_address"
+            android:inputType="textUri"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/login"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/ipAddress" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/login" />
+
+
+
+        <Button
+            android:drawableLeft="@drawable/ic_save_black_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:id="@+id/button_create"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
